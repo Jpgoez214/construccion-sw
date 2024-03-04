@@ -13,8 +13,7 @@ import java.util.Random;
 public class Punto20 {
 
     public static void main(String[] args) {
-          double[][] grades = new double[24][6]; 
-        // Initialize the matrix with random numbers between 0 and 5
+        double[][] grades = new double[24][6]; 
         Random random = new Random();
         for (int i = 0; i < 24; i++) {
             for (int j = 0; j < 6; j++) {
@@ -31,8 +30,6 @@ public class Punto20 {
             double average = sum / 6;
             System.out.println("The average grade of student " + (i+1) + " is: " + average);
         }
-
-        // Calculate and print the number of students who passed and failed each subject
         for (int j = 0; j < 6; j++) {
             int passed = 0, failed = 0;
             for (int i = 0; i < 24; i++) {
