@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class punto5 {
 
     public static void main(String[] args) {
-         int[][] matrix = {{0,1,2,3},{4,5,6,7},{8,9,0,1},{2,3,4,5}};
+        int[][] matrix = {{0,1,2,3},{4,5,6,7},{8,9,0,1},{2,3,4,5}};
         boolean[][] visible = new boolean[4][4]; // Matrix to track which numbers are visible
         int points = 0; // Player's points
-        Scanner scanner = new Scanner(System.in); // Scanner for user input
+        Scanner scanner = new Scanner(System.in);
 
         while (points < 10) { // The game continues until the player reaches 10 points
             System.out.println("Enter the coordinates of the first position (row column): ");
@@ -23,7 +23,7 @@ public class punto5 {
             int row2 = scanner.nextInt();
             int column2 = scanner.nextInt();
 
-            // Show the values in the positions selected by the user
+           
             System.out.println("You have selected the numbers " + matrix[row1][column1] + " and " + matrix[row2][column2]);
 
             if (matrix[row1][column1] == matrix[row2][column2]) { // If the numbers are equal
@@ -31,8 +31,6 @@ public class punto5 {
                 points++; // Increase the player's points
                 visible[row1][column1] = true; // Mark the first position as visible
                 visible[row2][column2] = true; // Mark the second position as visible
-
-                // Show the updated matrix with the visible numbers and the hidden ones with asterisks
                 for(int i=0; i<4; i++) {
                     for(int j=0; j<4; j++) {
                         if(visible[i][j]) { // If the number is visible
