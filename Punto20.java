@@ -21,7 +21,6 @@ public class Punto20 {
             }
         }
 
-        // Calculate and print the average grade of each student
         for (int i = 0; i < 24; i++) {
             double sum = 0;
             for (int j = 0; j < 6; j++) {
